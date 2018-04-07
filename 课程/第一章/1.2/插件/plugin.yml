@@ -1,0 +1,16 @@
+//插件名字
+name: MyNewPlugin
+//插件版本
+version: 1.0.0
+//插件主类(Main.php)的位置,要用\反斜线
+main: ymind\xming\MyNewPlugin\Main
+//插件的加载方式(默认POSTWORLD)
+load: POSTWORLD
+//插件作者(给你取个响亮的英文名吧)
+author: xMing
+//这个是服务器内核API适配的版本列表，默认这样写
+api:
+- 1.0.0
+- 2.0.0
+- 3.0.0
+- 4.0.0
