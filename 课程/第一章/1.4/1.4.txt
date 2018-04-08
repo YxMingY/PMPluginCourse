@@ -4,5 +4,5 @@
    比如getServer()获取服务器实例
    getLogger()貌似是获取控制台显示实例
    getDataFolder()获取/服务器/plugins/插件名/这个目录(会在使用配置文件时用到。)
-   本节课我们学习控制台显示内容，利用Logger的info方法。
+   本节课我们学习控制台显示内容，利用Logger的info，warning，notice方法。
    话不多说，去插件里看吧。
