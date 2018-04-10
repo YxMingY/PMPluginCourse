@@ -1,0 +1,10 @@
+name: MyNewPlugin
+version: 1.0.0
+main: ymind\xming\MyNewPlugin\Main
+load: POSTWORLD
+author: xMing
+api:
+- 1.0.0
+- 2.0.0
+- 3.0.0
+- 4.0.0

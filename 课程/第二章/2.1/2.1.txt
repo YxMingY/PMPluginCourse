@@ -1,0 +1,18 @@
+恭喜你已经完成了第一章的学习，可以制作出一个小插件了。
+本章主要是事件的监听和交互，本节课只学习事件的注册。
+  什么是事件? 事件就是服务器在运行过程中可能出现的事，例如一个玩家进服，一个玩家死了，一只苦力怕爆炸了，一个玩家点击了一下方块......
+  监听事件有什么用? 通过监听事件，你就可以知道一件事中的细节，并修改它或者从中得到信息，亦或是取消它。比如一个玩家打了另一个玩家一下，你就可以知道双方是谁，造成了多少伤害，可以修改伤害，甚至可以让这个事件不发生。
+  事件监听如何实现?首先，要监听事件，必须有监听器类，这个类好像没什么限制，只要是implements继承了[pocketmine\event\Listener]接口的类都是监听器类。
+  只有继承了Listener的类才是被服务器认可的监听器。有了Listener后，我们需要用主类来访问PluginManager，用PluginManager的registerEvents方法进行注册，事件的注册通常是在主类的onEnable方法中进行的。
+  
+  registerEvents(Listener $listener,Plugin $plugin)
+  
+  这是registerEvents方法的参数，Listener指要注册事件的类的实例，Plugin指插件主类的实例。
+  通常情况下主类通过该语句注册事件:
+  $this->getServer()->getPluginManager()->registerEvents($listener,$this);
+  而很多人喜欢注册主类的事件，把主类当监听器用，$listener就变成了$this
+  当然，不是只能有一个监听器。
+  
+  注册了事件后，当服务器有事件发生时，含有事件参数的方法就会被执行了(这是后面的内容)
+  
+  好了，去看插件吧。
