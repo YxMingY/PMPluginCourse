@@ -5,8 +5,10 @@ namespace ymind\xming\MyNewPlugin;
 use pocketmine\plugin\PluginBase;
 //调用Listener接口，方便继承
 use pocketmine\event\Listener;
-//玩家移动事件
-use pocketmine\event\player\PlayerMoveEvent;
+//实体伤害事件
+use pocketmine\event\entity\EntityDamageEvent;
+//玩家类，方便判断实体是不是玩家
+use pocketmine\Player;
 //主类 继承了PluginBase类，Listener接口
 class Main extends PluginBase implements Listener{
    public function onLoad(){
@@ -26,16 +28,19 @@ class Main extends PluginBase implements Listener{
       //用Logger在控制台显示警告消息(黄/红字)
       $this->getLogger()->warning("MyNewPlugin 已关闭!");
    }
-   
-   //监听玩家移动事件
-   public function onPlayerMove(PlayerMoveEvent $event){
-      $player=$event->getPlayer();
-      if($player->getName()=="Steve"){
-         //取消事件
-         $event->setCancelled();
-         //Player的sendPopup()方法给玩家发送底部显示
-         $player->sendPopup("Steve不许动!");
-         //好啦，你可以用Steve进服试试。
+
+   //实体伤害事件，有实体受到伤害时触发。
+   public function onEntityDamage(EntityDamageEvent $event){
+      /*
+      $event->getEntity()获取受伤实体
+      $event->getDamager()获取伤害造成者
+      $event->getDamage()获取伤害值
+      $event->setDamage(int $damage)设置伤害值
+      */
+      $entity=$event->getEntity();
+      if($entity instanceof Player){
+         //如果是收到伤害的是玩家类,设置伤害为0
+         $event->setDamage(0);
       }
    }
 }
