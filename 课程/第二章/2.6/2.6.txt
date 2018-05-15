@@ -1,0 +1,11 @@
+应@CPTUUD要求
+编写西瓜点地回血插件。
+1.监听PlayerInteractEvent玩家点地插件
+2.Player的
+   getMaxHealth()获取最大血量(血量上限，通常为20)
+   setHealth()设置血量
+3.PlayerInteractEvent的
+   getItem()获取玩家用来点地的Item(物品)
+4.Item的
+   getID()获取物品id
+   常亮MELON 为西瓜的id(360){访问方式为Item::MELON}
