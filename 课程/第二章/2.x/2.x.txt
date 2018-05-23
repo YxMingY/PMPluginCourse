@@ -1,0 +1,4 @@
+我们的第二章就到此结束了，有人可能会问，到底还有些什么事件呢
+这里有个网站
+https://genisyspro.github.io/docs/de/d7b/namespacepocketmine_1_1event_1_1player.html
+这里是所有的玩家事件，这也是GenisysPro的官方文档，关于gp核心的所有命名空间，你也可以看看其他的东西。
