@@ -1,0 +1,28 @@
+name: MyNewPlugin
+version: 1.0.0
+main: ymind\xming\MyNewPlugin\Main
+load: POSTWORLD
+author: xMing
+api:
+- 1.0.0
+- 2.0.0
+- 3.0.0
+- 4.0.0
+//指令列表
+commands:
+//指令mnp的信息
+ mnp:
+//对该指令的描述
+  description: MyNewPlugin总指令
+//为该指令选择一个权限设置
+  permission: MyNewPlugin.cmd
+//该指令的总使用方法
+  usage: /mnp
+//设置的权限列表
+permissions:
+//设置刚刚给指令用的MyNewPlugin.cmd
+  MyNewPlugin.cmd:
+//权限: true代表所有人，op代表控制台和op，false代表控制台
+    default: true
+//对该权限的描述
+    description: "MyNewPlugin指令权限."
