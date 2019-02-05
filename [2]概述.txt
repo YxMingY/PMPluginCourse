@@ -2,9 +2,9 @@
    再次声明: 本教程需要PHP基础!
    本教程版权请查看[声明.txt]
    什么是PHP?
-      PHP是一种计算器编程语言，用来和计算器说话的
+      PHP是一种计算机编程语言，用来编程
    什么是PocketkMine?
-      PocketMine是用PHP编写的Minecraft我的世界服务器的内核
+      PocketMine是用PHP编写的Minecraft我的世界服务器的内核(非官方)
    下面我来介绍一下教程的内容:
       第一章: 主要介绍插件的基本格式(plugin.yml的写法，主类)还有pluginbase实现的onEnable,onLoad,onDisable及进行开服控制台显示
       第二章: 介绍事件的监听，注册监听器等。实际操作有: 进服提示,禁止Steve移动,无敌等等
