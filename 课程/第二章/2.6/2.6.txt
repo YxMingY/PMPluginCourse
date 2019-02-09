@@ -8,4 +8,4 @@
    getItem()获取玩家用来点地的Item(物品)
 4.Item的
    getID()获取物品id
-   常亮MELON 为西瓜的id(360){访问方式为Item::MELON}
+   常量MELON 为西瓜的id(360){访问方式为Item::MELON}
